@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--5.0时用Toolbar替代了以前ActionBar-->
+    <!--使用ActionBar时可定制性会相对较差-->
+
+    <!--使用流程
+    1 NoActionBar主题
+    2 布局操作
+    3 代码实现
+      3.1 用toolbar来更换以前的actionBar
+      3.2 基本操作actionbar
+          3.3 加home按钮
+          3.4 加home按钮监听-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:titleTextColor="@android:color/white" />
+
+    <include
+        layout="@layout/content_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
